@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'lorem/standard' => 'welcome#poem', as: :lorem
-  get 'billy' => 'welcome#billy'
+  get 'sports/fav-teams' => 'sports#list', as: :products
+
+  get  'lorem/standard' => 'welcome#poem', as: :lorem
+  get  'billy' => 'welcome#billy', as: :billy
   root 'welcome#index'
+
 
 
 

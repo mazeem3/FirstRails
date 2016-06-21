@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MyFirstRailsApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<nav>
-  <a href="/">Home</a>
-  <a href="/billy/">Billy</a>
-  <a href="/lorem/standard">Lorem Ipsum</a>
+    <head>
+        <title>MyFirstRailsApp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+      <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
+        <li role="presentation"><%= link_to 'Billy', billy_path %></li>
+        <li role="presentation"><%= link_to 'Lorem Ipsum', lorem_path %></li>
+        <li role="presentation"><%= link_to 'Favorite Teams', products_path %></li>
 
-</nav>
-<%= yield %>
+      </ul>
+      </nav>
+        <%= yield %>
 
-</body>
+    </body>
 </html>
